@@ -29,24 +29,24 @@ void draw()
 {
 	system(" cls");
 	for (int i = 0; i < width + 2; i++)
-		cout << "#";
+		cout << "\xB0";
 	cout << endl;
 	for (int i = 0; i < height; i++) {
 		for (int j = 0; j < width; j++)
 		{
 			if (j == 0)
-				cout << "#";
+				cout << "\xB0";
 			if (i == y && j == x)
-				cout << "O";
+				cout << "\x99";
 			else if (i == fruitY && j == fruitX)
-				cout << "F";
+				cout << "\xFE";
 			else {
 				bool print = false;
 
 				for (int k = 0; k < nTail; k++) {
 
 					if (tailX[k] == j && tailY[k] == i) {
-						cout << "o";
+						cout << "O";
 						print = true;
 					}
 
@@ -58,13 +58,13 @@ void draw()
 
 
 			if (j == width - 1)
-				cout << "#";
+				cout << "\xB0";
 		}
 		cout << endl;
 
 	}
 	for (int i = 0; i < width + 2; i++)
-		cout << "#";
+		cout << "\xB0";
 	cout << endl;
 	cout << "score: " << score << endl;
 
